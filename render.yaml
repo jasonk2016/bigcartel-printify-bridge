@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: bigcartel-printify-bridge
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PRINTIFY_API_KEY
+        sync: false
+      - key: PRINTIFY_SHOP_ID
+        sync: false
+      - key: BIGCARTEL_TOKEN
+        sync: false
+      - key: BIGCARTEL_STORE_ID
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: PORT
+        value: "3000"
